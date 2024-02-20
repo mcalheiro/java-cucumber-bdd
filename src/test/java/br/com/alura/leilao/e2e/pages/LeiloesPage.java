@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+
 public class LeiloesPage {
 
 	private WebDriver driver;
@@ -21,10 +22,18 @@ public class LeiloesPage {
 		driver.get(PAGE_URL);
 	}
 
-	public boolean existe(String nomeProduto, String valor, String usuario) {
-		return driver.getCurrentUrl().endsWith("/leiloes") && driver.getPageSource().contains(nomeProduto) && 
-				driver.getPageSource().contains(valor);
+	public boolean existe(String nomeProduto, String valor, String data, String usuario) {
+		return driver.getPageSource().contains(nomeProduto) &&
+				driver.getPageSource().contains(valor) && 
+				driver.getPageSource().contains(data) && 
+				driver.getPageSource().contains(usuario);
 	}
+	
+	public boolean estaNaPaginaDeLeiloes() {
+		this.esperaCarregar();
+		return this.driver.getCurrentUrl().endsWith("/leiloes");
+	}
+
 
 	public NovoLeilaoPage visitaPaginaParaCriarUmNovoLeilao() {
 		

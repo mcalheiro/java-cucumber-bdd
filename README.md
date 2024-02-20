@@ -4,9 +4,13 @@ This repository contains Cucumber practice. I created some features written in G
 
 ## Tests implemented
 - Unit tests
-- E2E
+- E2E tests
 
 ## Dependencies used
-- Junity 5
+- JUnity 5
 - Cucumber 6
 - Selenium
+
+## Usage
+In order to run the tests, it is required that you have installed java jdk8 and download SprintToolSuite4 (or Eclipse IDE).
+Then, in Sprint (or Eclipse), import the ```pom.xml``` file and wait for setup to complete. Then, right click on ```/leilao/src/test/java/br/com/alura/leilao/acceptance/LeilaoCucumberRunner.java``` and run as JUnit test.

@@ -7,12 +7,12 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 public class BrowserFactory {
 
-//  Documentação
 //	http://chromedriver.storage.googleapis.com/index.html
 //	https://github.com/mozilla/geckodriver/releases	
-
+//  Download latest versions and replace Paths in init functions below
+	
 	public WebDriver createWebDriver() {
-		String webdriver = System.getProperty("browser", "htmlunit");
+		String webdriver = System.getProperty("browser", "firefox");
 		switch (webdriver) {
 			case "firefox":
 				return initFirefoxDriver();
@@ -25,13 +25,13 @@ public class BrowserFactory {
 
 	private  WebDriver initChromeDriver() {
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\stepp\\Desktop\\curso-bdd\\workspace\\leilao\\drivers\\chromedriver.exe");
+				"D:\\Alura\\bdd-cucumber\\1821-bdd-cucumber-java-aula1\\drivers\\chromedriver.exe");
 		return new ChromeDriver();
 	}
 
 	private  WebDriver initFirefoxDriver() {
 		System.setProperty("webdriver.gecko.driver",
-				"C:\\Users\\stepp\\Desktop\\curso-bdd\\workspace\\leilao\\drivers\\geckodriver.exe");
+				"D:\\Alura\\bdd-cucumber\\1821-bdd-cucumber-java-aula1\\drivers\\geckodriver.exe");
 		return new FirefoxDriver();
 	}
 }
