@@ -14,3 +14,5 @@ This repository contains Cucumber practice. I created some features written in G
 ## Usage
 In order to run the tests, it is required that you have installed java jdk8 and download SprintToolSuite4 (or Eclipse IDE).
 Then, in Sprint (or Eclipse), import the ```pom.xml``` file and wait for setup to complete. Then, right click on ```/leilao/src/test/java/br/com/alura/leilao/acceptance/LeilaoCucumberRunner.java``` and run as JUnit test.
+
+This is a reproduction of the code from [BDD with Cucumber from Alura](https://cursos.alura.com.br/course/bdd-cucumber-java).
